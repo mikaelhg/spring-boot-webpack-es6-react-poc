@@ -8,9 +8,9 @@ The project provides backend services using Spring Boot, and generates a nice cl
 using the Maven Frontend plugin to first fetch a relevant Node.JS v5.0.0 binary package, NPM, then run
 `npm install` to fetch a shitload of JS modules, and execute WebPack through NPM.
 
-WebPack goes on to load its Babel.JS module, and configure it with ES2015 and React Babel modules.
+WebPack goes on to load its Babel.JS module, and configure it with ES2015 and React Babel profiles.
 
-Babel then transpiles the JavaScript file from shiny ES6 to ES5 which shitty browsers can actually run.
+Babel then transpiles the JavaScript input files from shiny ES6 to ES5, which shitty browsers can actually run.
 
 WebPack slams all this JavaScript together, the entrypoint JS file set in the configuration file,
 everything that file imports, and everything THAT imports, ad nauseam, into the (possibly giant)
@@ -25,3 +25,23 @@ and `npm run-script dev-build` to manually compile the stuff. It should be prett
 to automatically build things, and trigger LiveReload.
 
 But that's a story to be explored on some other night.
+
+### IntelliJ IDEA users
+
+File -> Settings -> Languages & Frameworks -> JavaScript:
+
+JavaScript language version: JSX Harmony
+
+Libraries -> ECMAScript 6: Enabled
+
+-----
+
+File -> Settings -> Build, Execution, Deployment -> Compiler:
+
+Make project automatically: Enabled
+
+-----
+
+CTRL-SHIFT A -> Registry... :
+
+compiler.automake.allow.when.app.running: Enabled
