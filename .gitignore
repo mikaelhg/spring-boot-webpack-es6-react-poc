@@ -1,0 +1,10 @@
+/target/
+.settings
+.project
+.classpath
+/.idea/
+/*.iml
+/devdb*
+/src/main/resources/git.properties
+/data/
+node_modules/
