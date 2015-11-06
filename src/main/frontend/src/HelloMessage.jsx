@@ -4,6 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
+require('!style!css!less!./HelloMessage.less');
+
 export class HelloMessage extends React.Component {
     constructor(props) {
         super(props);
@@ -18,11 +20,13 @@ export class HelloMessage extends React.Component {
     }
     render() {
         return (
-            <div>Hello {this.state.name} #{this.state.counter} at {this.state.timestamp}</div>
+            <div className="app-hello-message">
+                Hello {this.state.name} #{this.state.counter} at {this.state.timestamp}
+            </div>
         );
     }
     componentDidMount() {
-        this.interval = window.setInterval(this.tick.bind(this), 1000);
+        this.interval = window.setInterval(this.tick.bind(this), 5000);
     }
     componentWillUnmount() {
         clearInterval(this.interval);
