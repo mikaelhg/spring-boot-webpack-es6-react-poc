@@ -22,6 +22,8 @@
     "react-dom": "^0.14.2"
   },
   "scripts": {
-    "dev-build": "webpack -d --display-modules"
+    "watch": "webpack -d --watch",
+    "dev-build": "webpack -d --display-modules",
+    "prod-build": "webpack -d -p"
   }
 }

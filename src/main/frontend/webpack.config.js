@@ -1,17 +1,23 @@
 var webpack = require("webpack");
+var path = require('path');
 
 module.exports = {
-    entry: "./entry.js",
+    entry: "./src/entry.js",
     output: {
         path: '../../../target/classes/static/',
         filename: "bundle.js"
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            {
+                test: /\.css$/,
+                loader: "style!css"
+            },
             {
                 test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
+                include: [
+                    path.resolve(__dirname, "./src")
+                ],
                 loader: 'babel',
                 query: {
                     presets: ['es2015', 'react']
