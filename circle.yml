@@ -1,0 +1,12 @@
+machine:
+  java:
+    version: oraclejdk8
+
+general:
+  artifacts:
+    - "target/*.jar"
+
+test:
+  post:
+    - "mkdir -p $CIRCLE_TEST_REPORTS/junit/"
+    - "find . -type f -regex \".*/target/surefire-reports/.*xml\" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \\;"

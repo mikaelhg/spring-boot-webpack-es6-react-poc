@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -21,7 +21,7 @@ public class Application {
         return ImmutableMap.of(
                 "name", "World",
                 "counter", Long.toString(counter.getAndIncrement()),
-                "timestamp", ZonedDateTime.now().toString()
+                "timestamp", OffsetDateTime.now().toString()
         );
     }
 

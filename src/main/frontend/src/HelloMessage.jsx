@@ -1,7 +1,6 @@
 "use strict";
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 require('!style!css!less!./HelloMessage.less');
@@ -15,7 +14,7 @@ export class HelloMessage extends React.Component {
             when: ''
         };
     }
-    tick() {
+    fetchState() {
         $.ajax('/api/hello').done((data) => this.setState(data));
     }
     render() {
@@ -26,7 +25,7 @@ export class HelloMessage extends React.Component {
         );
     }
     componentDidMount() {
-        this.interval = window.setInterval(this.tick.bind(this), 5000);
+        this.interval = window.setInterval(this.fetchState.bind(this), 1000);
     }
     componentWillUnmount() {
         clearInterval(this.interval);
