@@ -3,6 +3,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { HelloMessage } from './HelloMessage.jsx';
+import { Application } from './Application.jsx';
 
-ReactDOM.render(<HelloMessage />, document.getElementById('content'));
+ReactDOM.render(<Application />, document.getElementById('content'));

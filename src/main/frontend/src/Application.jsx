@@ -3,9 +3,9 @@
 import React from 'react';
 import $ from 'jquery';
 
-require('!style!css!less!./HelloMessage.less');
+require('!style!css!less!./Application.less');
 
-export class HelloMessage extends React.Component {
+export class Application extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
