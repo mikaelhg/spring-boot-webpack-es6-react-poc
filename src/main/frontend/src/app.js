@@ -5,4 +5,4 @@ import ReactDOM from 'react-dom';
 
 import { Application } from './Application.jsx';
 
-ReactDOM.render(<Application />, document.getElementById('content'));
+window.app = ReactDOM.render(<Application />, document.getElementById('content'));
