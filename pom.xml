@@ -78,7 +78,7 @@
                     <workingDirectory>src/main/frontend</workingDirectory>
                     <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
                     <nodeVersion>v6.4.0</nodeVersion>
-                    <npmVersion>3.10.8</npmVersion>
+                    <npmVersion>3.10.3</npmVersion>
                     <installDirectory>target</installDirectory>
                 </configuration>
                 <executions>
