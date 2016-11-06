@@ -1,4 +1,4 @@
-### POC: Spring Boot + Maven Frontend Plugin + Node + Npm + Webpack + Babel + React + JQuery
+### POC: Kotlin + Spring Boot + Webpack + Babel + ReactJS
 
 ```bash
 mvn clean package spring-boot:run
