@@ -4,6 +4,7 @@
   "description": "SBMFP Frontend",
   "license": "MIT",
   "repository": "yeah",
+  "private": true,
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
